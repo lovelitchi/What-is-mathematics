@@ -1,0 +1,205 @@
+\chapter{自然数}
+\label{chap:natural-number}
+
+\section*{引言}
+数是近代数学的基础。然而数是什么呢？当我们说$\frac{1}{2} + \frac{1}{2}= 1,
+\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}$和$(-1)(-1) = 1$时，
+这是什么意思呢？在中、小学校里我们已经学过处理
+分数和负数的方法，但是为了真正理解数系，我们必须回到更简单的基础。虽然希腊人曾经把点和线等几何概念作为他们的数学基础，但是，
+所有的数学命题最终应归结为关于\textbf{自然数}\footnote{本书中的自然数不包括0，和现代的自然数定义略有不同。
+——译注}$1,2,3,\ldots$的
+命题，这一点已变成了现代的指导原则。“上帝创造了自然数，其余的是人的工作。”在这句话中，克隆尼克（L. Kronecker，
+1823$\sim$1891）指出了建立数学结构稳固基础的条件。
+
+由人类智慧所创造的数，可用来数各种集合中的对象的个数，它和对象所特有的性质无关。例如数“六”是从所有包含六个东西的实际集合中抽象
+出来的；它不依赖这些对象的任何特殊性质，也不依赖于表示它所采用的符号。只有在智力发展到一个比较先进的阶段，数字概念的抽象性才变得
+清楚了。对儿童来说，数通常总是和实际的对象连在一起的，例如手指或珠子。而且在早期的语言中，是通过对不同对象使用不同类型的数的语言
+来表达一个具体数字的意义的。
+
+幸而数学家不必去讨论从具体对象的集合转化到抽象数的概念的哲学性质。因此，我们把自然数及其两种基本运算——加法和乘法一一当作已知的
+概念接受下来。
+
+\newpage
+\section{整数的计算}
+\subsection{算术的规律}
+自然数或正整数的数学理论就是众所周知的算数。算术的基础在于：整数的加法和乘法服从某些规律。为了要叙述这些具有普遍性的规律，
+我们不能用像$1, 2, 3$这种表示特定数的符号。两个整数，不管它们的次序如何，它们的和相同。而
+\begin{equation*}
+1+2=2+1
+\end{equation*}
+这一命题仅仅是这一般规律的一个特殊例子。因此当我们希望表示整数之间的某个关系——不论所涉及的一些特定的整数值如何——是正确的，
+我们可以用字母$a,b,c,\ldots$作为表示整数的符号。于是，读者所熟知的五个算术基本规律可叙述为：
+\begin{equation*}
+\begin{split}
+&1)\; a+b=b+a,\\
+&2)\; ab=ba,\\
+&3)\; a+(b+c)=(a+b)+c,\\
+&4)\; (ab)c = a(bc),\\
+&5)\; a(b+c)=ab+ac,\\
+\end{split}
+\end{equation*}
+
+%前两个是加法和乘法的\textbf{交换律}，它说明人们可以交换加法或乘法中元素的次序。第三个是加法的\textbf{结合律}，它表明
+三个数相加时，或者我们把第一个加上第二个与第三个的和；或者我们把第三个加上第一个与第二个的和，其结果都相同。第四个是乘法
+的结合律。最后一个是\textbf{分配律}，它表明用一个整数去乘一个和时，我们可以用这整数去乘这和的每一项，然后把这些乘积加
+起来。
+
+这些算术规律是简单的，而且好像是显然的。但是它们对于整数以外的对象可能不适用。如果$a$和$b$不是整数的符号，而是化学物质的
+符号；同时，如果“加”这个词正是我们平常说话中所用的那个意思，那么很显然，交换律并不总是成立的。例如，如果把硫酸加到水中，得到
+的结果是稀释，而把水加到硫酸中则会对实验人员产生灾难性的后果。类似的例子还表明，在这类化学“算术”中，加法的结合律和分配律也会
+失灵。因此，人们可以想象在这些算术中，规律$1)\sim5)$中的某一个或者某一些并不成立。实际上，这样的系统在现代数学中已在研究着。
+
+对抽象的整数概念给出一个具体模型就能够说明规律$1)\sim5)$所依据的直观基础。对于一个给定的集合（比如说某一棵树上的所有苹果），
+其中对象的个数我们不用通常的符号$1,2,3$等来表示，而在一个方框放一些点来表示，一个点代表一个对象。通过这些方框的运算我们可以
+看到这些整数的算术规律。两个整数$a$和$b$相加时，我们把相应的方框两端相连，并去掉中间的相隔线。
+\begin{equation*}
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet\end{bmatrix}+
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet\end{bmatrix}= 
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet &\bullet &\bullet &\bullet
+&\bullet\end{bmatrix}
+\end{equation*}
+\begin{center}
+图$1$\quad 加法
+\end{center}
+
+为了乘$a$和$b$，我们把两个方框中的点排成行构成一个新方框，其中有$a$行，$b$列个点。
+\begin{equation*}
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet\end{bmatrix} \times
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet\end{bmatrix}= 
+\begin{bmatrix}
+\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet \\
+\end{bmatrix}
+\end{equation*}
+\begin{center}
+图$2$\quad 乘法
+\end{center}
+
+现在我们可以把规律$1)\sim5)$看成是用这些直观明了的方框来进行运算的性质。
+\begin{equation*}
+\begin{bmatrix} \bullet &\bullet &\bullet \end{bmatrix} \times
+\left(\begin{bmatrix} \bullet &\bullet\end{bmatrix}+ 
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet\end{bmatrix}\right) =
+\begin{bmatrix} \bullet &\bullet \\ \bullet &\bullet \\ \bullet &\bullet \\ \end{bmatrix} + 
+\begin{bmatrix}
+\bullet &\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet &\bullet \\
+\bullet &\bullet &\bullet &\bullet &\bullet \\
+\end{bmatrix}
+\end{equation*}
+\begin{center}
+图$3$\quad 分配律
+\end{center}
+
+从两个整数的加法定义出发，我们可以定义\textbf{不等}关系。$a<b$（读作$a$小于$b$）和$a>b$（读作$a$大于$b$）,
+这两个命题中的任何一个都是指：方框$b$可以由方框$a$加上一个适当选择（使得$b=a+c$）的第三个方框$c$而得到。这是我们记
+\begin{equation*}
+c=b-a,
+\end{equation*}
+它定义了\textbf{减法}运算。
+\begin{equation*}
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet &\bullet &\bullet &\bullet
+&\bullet\end{bmatrix} - 
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet\end{bmatrix} = 
+\begin{bmatrix} \bullet &\bullet &\bullet &\bullet &\bullet\end{bmatrix}
+\end{equation*}
+\begin{center}
+图$4$\quad 减法
+\end{center}
+
+加法和减法称为\textbf{互逆}运算，因为如果整数$a$加整数$d$，然后再减整数$d$，得到的结果还是原来的整数$a$：
+\begin{equation*}
+(a+d)-d=a.
+\end{equation*}
+应当注意，整数$b-a$仅当$b>a$时才有定义，当$b<a$时，符号$b-a$解释为\textbf{负整数}，这将在后面讨论。
+
+为了方便起见，我们用记号$b\geq a$（读作“$b$大于等于$a$”）或$a\leq b$（读作“$a$小于等于$b$”）来表示对$a>b$的否定。
+
+引入整数\textbf{零}（它用一个完全空的方框表示），使我们可以稍微扩大正整数（它们用有点的方框表示）的范围。如果我们用通常
+的符号$0$来表示空方框，则按照加法和乘法的定义，对于每一个整数$a$有
+\begin{equation*}
+\begin{split}
+a+0=a, \\
+a\cdot 0=0.
+\end{split}
+\end{equation*}
+因为$a+0$表示一个空方框加到方框$a$上，而$a\cdot 0$表示一个没有列的方框，即一个空方框。
+
+通过对每个整数$a$建立
+\[
+a-a=0,
+\]
+减法的定义很自然地推广了。这些是\textbf{零}的特殊算术性质。
+
+类似于上述方框中加点的集合模型（如古代算盘），一直到中世纪的后期都被广泛地用在数值计算上。从中世纪以后，它们才逐渐被建立在
+十进制上的更高级的符号方法所替代。
+
+\subsection{整数的表示}
+我们必须仔细地把每一个整数和用来表示它的符号$5,V,\ldots$区分开来。在十进位制中，$0,1,2,3,\dots,9$，这十个数码符号是用来
+表示零和前九个正整数的。一个较大的正整数，例如“三百七十二”可表示为
+\[
+300+70+2 = 3\cdot 10^2 + 7\cdot 10 + 2
+\]
+的形式，而这在十进位制中用符号$372$表示。这里重要的是，数码符号$3,7,2$的意义依赖于它们在个位、十位、百位的\textbf{位置}。
+有了这个“位置记法”，我们用十个数码符号的各种组合就可以表示出任何整数。表示一个整数的一般规则可以用
+\[
+z=a\cdot 10^3 + b\cdot 10^2 + c\cdot 10 + d
+\]
+来说明。这里数码$a,b,c,d$是从零到九的整数。这时，我们用缩写符号
+\[ abcd \]
+来表示整数$z$。我们注意到系数$d,c,b,a$是整数$z$连续被$10$除后的余数，例如
+\begin{center}
+\begin{tabular}{rc}
+10\underline{)\! 372} & \: 余\quad 数 \\
+10\underline{)\! 37}  & \: 2 \\
+10\underline{)\! 3}   & \: 7 \\
+                   0  & \: 3 \\
+\end{tabular}
+\end{center}
+
+上面对$z$给出的这种特殊表达式，仅能表示小于一万的正整数，因为再大的正整数，要求用五个或五个以上的数码符号来表示。如果$z$是在
+一万到十万之间的一个整数，我们可以用
+\[
+z=a\cdot 10^4 + b\cdot 10^3 + c\cdot 10^2 + d\cdot 10 + e
+\]
+的形式来表示，并且用符号$abcde$来记它。对十万到百万之间的整数以及更大的数，类似的表达式都成立。如果用一个简单的公式能完整
+概括地表述这些结果，那将是十分有用的。我们可以这样作：对不同的系数$e,d,c,\ldots$我们用一个带有不同“下标”的字母$a$，即
+$a_0,a_1,a_2,a_3,\ldots$来表示，十的幂不论有多大，都可以这样来表示，即记这最高次幂为$10^n$，而不是上面例子中的$10^3$
+或$10^4$，这里$n$理解为是一个任意的正整数。这时，在十进位制中表示一个正整数$z$的一般方法是，把$z$表示为
+\[
+z=a_n\cdot 10^n + a_{n-1}\cdot 10^{n-1} + \cdots + a_1\cdot 10 + a_0, \leqno(1)
+\]
+而且用符号
+\[ a_{n}a_{n-1}a_{n-2}\cdots a_{1}a_{0} \]
+来记它。与上面的特殊情况一样，我们看到数字$a_0,a_1,a_2,\cdots ,a_n$是$z$连续被10除后所得到的一系列余数。
+
+在十进位系统中，数十，是单独选出作为基底的。一般人可能没认识到，并不一定非得选取十不可，任何大于一的正整数都可用来作基底。
+例如，可以用一个七进位系统（基底是7）。在这样一个系统中，一个正整数可以表示为
+\[
+b_n\cdot 7^n + b_{n-1}\cdot 7^{n-1} + \cdots + b_1\cdot 7 + b_0, \leqno(2)
+\]
+这些$b$是从零到六的数码。这时这个正整数用
+\[ b_{n}b_{n-1}\cdots b_{1}b_{0} \]
+来表示。因此“一百零九”在七进位系统中用符号$214$表示，其意义是
+\[ 214 = 2\cdot 7^2 + 1\cdot 7 + 4 \]
+
+作为一个练习，读者可以证明：从以十为基底变成任何其他基底$B$的一般规则是，用$B$连续除以十为基底的整数$z$，所得的余数将是在以
+$B$为基底的系统中的数码，例如
+\begin{center}
+\begin{tabular}{rc}
+7\underline{)\! 109} & \: 余\quad 数 \\
+7\underline{)\! 15}  & \: 4 \\
+7\underline{)\! 2}   & \: 1 \\
+                   0 & \: 2 \\
+\end{tabular}\\
+\vspace{1em}
+109(十进位制)=214(七进位制)
+\end{center}
+
+很自然地会问，究竟选择哪一个基底最合适。我们从下面会看到，太小的基底有它不方便之处，而一个大的基底要求记住许多数码符号和有一个
+更大的乘法表。有人曾鼓动过用十二作基底，因为十二能被二、三、四和六整除，这样，涉及除法和分数时，常能简化。为了写出任一以十二为
+基底（十二进位系统）的正整数，我们要求对十和十一采用两个新的数码符号，让我们用$\alpha$表示十，用$\beta$表示十一。这样在十二
+进位制中，“十二”将写成$10$，而“二十二”将是$1\alpha$，“二十三”将是$1\beta$，“一百三十一”是$\alpha \beta$。
